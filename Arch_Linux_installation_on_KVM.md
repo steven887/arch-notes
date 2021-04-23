@@ -1,13 +1,12 @@
-Arch Linux Installation on KVM
+# Arch Installation on kvm Step Guide
 
-# Arch Installation on kvm  
+### check internet connection
 
-### check internet connection 
 ```
 ping archlinux.org
 ```
 
-### Update the system clock 
+### Update the system clock \[Update the system clock\]
 
 ```
 timedatectl set-ntp true
@@ -141,27 +140,34 @@ hwclock --systohc
 127.0.1.1   yourHostName.localdomain    yourHostName
 ```
 
-- **install and symlink `dhcpcd`***
+- **install** `dhcpcd`
 
 ```
-sudo pacman -S dhcpcd
+$ sudo pacman -S dhcpcd
 
-``````
-systemctl enable dhcpd
 ```
+- **enable & start service** `dhcpcd`
 
+```
+$ sudo systemctl enable dhcpd
+$ sudo systemctl start dhcpd
+
+
+```
 ### **Set Root Password**
 
 ```
-   passwd
-```
+passwd
 
+```
 ### **Users and Groups**
 
-- Create your username```
+- Create your username
+	```
     useradd -m  yourusername
     ```
-- Set Password for your username:```
+- Set Password for your username:
+	```
     passwd yourusername
     ```
 - add user to sudoers:
@@ -186,12 +192,13 @@ systemctl enable dhcpd
 ### **Install Boot Loader**
 
 ```
-    sudo pacman -S grub
-``````
-    grub-install /dev/xda
-``````
-    grub-mkconfig -o /boot/grub/grub.cfg
+# sudo pacman -S grub 
+
+# grub-install /dev/xda
+
+# grub-mkconfig -o /boot/grub/grub.cfg 
 ```
+
 
 `exit` to exit a chroot
 
@@ -199,8 +206,12 @@ systemctl enable dhcpd
 
 shutdown the kvm and turn-on back again the kvm
 
-for install KDE plasma :
+**For install KDE plasma :**
 
 ```
-    sudo pacman -S xorg plasma konsole
+sudo pacman -S xorg plasma konsole 
 ```
+
+**For install and using Xmonad :**
+```
+$ sudo pacman -S xorg xmonad xmonad-contrib xmobar dmenu
