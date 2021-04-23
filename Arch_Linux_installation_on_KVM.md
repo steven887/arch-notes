@@ -1,14 +1,13 @@
 Arch Linux Installation on KVM
 
-# Arch Installation on kvm Step Guide \[Arch Installation on kvm Step Guide\]
+# Arch Installation on kvm  
 
-### check internet connection \[check internet connection\]
-
+### check internet connection 
 ```
 ping archlinux.org
 ```
 
-### Update the system clock \[Update the system clock\]
+### Update the system clock 
 
 ```
 timedatectl set-ntp true
