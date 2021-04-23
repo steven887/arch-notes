@@ -158,7 +158,6 @@ $ sudo systemctl start dhcpd
 
 ```
 passwd
-
 ```
 ### **Users and Groups**
 
