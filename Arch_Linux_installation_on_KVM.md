@@ -185,7 +185,7 @@ passwd
         ```
         visudo
         ```
-    - edit and uncomment line `%wheel ALL=(ALL) NOPASSWD: ALL` to get a root privilleges
+    - edit and uncomment line `%wheel ALL=(ALL) ALL` to execute any command
         
 
 ### **Install Boot Loader**
