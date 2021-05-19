@@ -135,8 +135,8 @@ hwclock --systohc
     
 
 ```
-127.0.0.1   yourHostName
-::1         yourHostName
+127.0.0.1   localhost
+::1         localhost
 127.0.1.1   yourHostName.localdomain    yourHostName
 ```
 
